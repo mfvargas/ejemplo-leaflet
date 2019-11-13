@@ -5,7 +5,7 @@ var map = L.map("mapid");
 
 // Centro del mapa y nivel inicial de acercamiento
 var catedralSJ = L.latLng([9.9326673, -84.0787633]);
-var zoomLevel = 8;
+var zoomLevel = 7;
 
 // Vista del mapa
 map.setView(catedralSJ, zoomLevel);
@@ -34,22 +34,45 @@ var layer_image_temperatura = L.imageOverlay("datos/bio1_cr.png",
 
 // ** Marcadores **
 
-// Marcador para la Catedral Metropolitana de San José
+// Marcador para el Volcán Rincón de la Vieja
 // Ubicación
-var marker_catedralSJ = L.marker([9.9326673, -84.0787633], 
-																{draggable:false, 
-																opacity:1}).addTo(map);
+var marker_volcan_rinconVieja = L.marker([10.8164249, -85.3593949]).addTo(map);
 // Popup																
-marker_catedralSJ.bindPopup('<a href="https://es.wikipedia.org/wiki/Catedral_metropolitana_de_San_Jos%C3%A9">Catedral Metropolitana de San José</a>.<br>Catedral de estilo clásico y barroco. Templo principal de la arquidiócesis católica de San José.<br>Construída entre 1825 y 1827 y reconstruída en 1878.');
+marker_volcan_rinconVieja.bindPopup('<a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Rinc%C3%B3n_de_la_Vieja">Volcán Rincón de la Vieja</a><br>Altitud: 1916 msnm.');
 // Tooltip
-marker_catedralSJ.bindTooltip("Catedral Metropolitana de San José");
+marker_volcan_rinconVieja.bindTooltip("Volcán Rincón de la Vieja");
 
-// Marcador personalizado para la Catedral Metropolitana de San José
-/* var marker_catedralSJ = L.marker([9.9326673, -84.0787633],
-	{ icon: L.divIcon(
-		{ html: '<i class="fas fa-church"></i>'}
-	)}
-).addTo(map);	 */
+// Marcador para el Volcán Arenal
+// Ubicación
+var marker_volcan_arenal = L.marker([10.4626255, -84.720689]).addTo(map);
+// Popup																
+marker_volcan_arenal.bindPopup('<a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Arenal">Volcán Arenal</a><br>Altitud: 1670 msnm.');
+// Tooltip
+marker_volcan_arenal.bindTooltip("Volcán Arenal");
+
+// Marcador para el Volcán Poás
+// Ubicación
+var marker_volcan_poas = L.marker([10.1977771, -84.2480652]).addTo(map);
+// Popup																
+marker_volcan_poas.bindPopup('<a href="https://es.wikipedia.org/wiki/Parque_nacional_Volc%C3%A1n_Po%C3%A1s">Volcán Poás</a><br>Altitud: 2708 msnm.');
+// Tooltip
+marker_volcan_poas.bindTooltip("Volcán Poás");
+
+// Marcador para el Volcán Turrialba
+// Ubicación
+var marker_volcan_turrialba = L.marker([10.0162931, -83.7823888]).addTo(map);
+// Popup																
+marker_volcan_turrialba.bindPopup('<a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Turrialba">Volcán Turrialba</a><br>Altitud: 3340 msnm.');
+// Tooltip
+marker_volcan_poas.bindTooltip("Volcán Turrialba");
+
+// Marcador para el Volcán Irazú
+// Ubicación
+var marker_volcan_irazu = L.marker([9.979981, -83.8578309]).addTo(map);
+// Popup																
+marker_volcan_irazu.bindPopup('<a href="https://es.wikipedia.org/wiki/Volc%C3%A1n_Iraz%C3%BA">Volcán Irazú</a><br>Altitud: 3432 msnm.');
+// Tooltip
+marker_volcan_poas.bindTooltip("Volcán Irazú");
 
 
 // ** Controles **
