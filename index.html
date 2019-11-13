@@ -29,10 +29,54 @@
 	<h1>Volcanes de Costa Rica</h1>
 	
 	<p>
-	 En Costa Rica se presenta un gran vulcanismo debido a su ubicación en el <a href="https://es.wikipedia.org/wiki/Cintur%C3%B3n_de_Fuego_del_Pac%C3%ADfico">Cinturón de Fuego del Pacífico</a>, que es conocido por su elevada sismicidad.
+	 Costa Rica es un país con un elevado nivel de vulcanismo debido a su ubicación en el <a href="https://es.wikipedia.org/wiki/Cintur%C3%B3n_de_Fuego_del_Pac%C3%ADfico">Cinturón de Fuego del Pacífico</a>, que es conocido también por su elevada sismicidad. Tanto el vulcanismo como la sismicidad están incluenciados por los choques y las subducciones entre la <a href="https://es.wikipedia.org/wiki/Placa_de_Cocos">Placa de Cocos </a>y la <a href="https://es.wikipedia.org/wiki/Placa_del_Caribe">Placa del Caribe</a> (vea también <a href="http://geologiacostarica.blogspot.com/p/como-se-produce-el-sismo.html">Placas Cocos y Caribe para Costa Rica. ¿Cómo funciona?</a>).
 	</p>
-	<!-- Elemento div para contener el mapa -->
-	<div id="mapid"></div>	
+	
+	<div class="row">
+		<div class="column">
+			<h3>Ubicación</h3>
+			<!-- Elemento div para contener el mapa -->
+			<div id="mapid"></div>	
+		</div>
+		
+		<div class="column">
+		
+		  <!-- Tabla con información general sobre los volcanes de Costa Rica -->
+			<table>
+			  <caption>Información general (Fuente: <a href="https://es.wikipedia.org/wiki/Anexo:Volcanes_de_Costa_Rica">Volcanes de Costa Rica</a>).</caption>
+				<tr>
+					<th>Nombre</th>
+					<th>Altitud (en msnm)</th>
+					<th>Última erupción registrada</th>
+				</tr>
+				<tr>
+					<td>Arenal</td>
+					<td>1670</td>
+					<td>Octubre de 2010</td>
+				</tr>
+				<tr>
+					<td>Irazú</td>
+					<td>3432</td>
+					<td>8 de diciembre de 1994</td>
+				</tr>
+				<tr>
+					<td>Poás</td>
+					<td>2708</td>
+					<td>11 de octubre de 2019</td>
+				</tr>
+				<tr>
+					<td>Turrialba</td>
+					<td>3340</td>
+					<td>25 de octubre de 2019</td>
+				</tr>				
+			</table>
+			
+			
+			<!-- Controles para la opacidad de la capa de temperatura -->
+			<h5>Opacidad de la capa de temperatura: <span id="span-opacity">0.5</span></h5>
+			<input type='range' id='sld-opacity' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacity();'>
+		</div>
+	</div>
 	
 	<!-- Código principal en JS -->
 	<script src="js/scripts.js"></script>	

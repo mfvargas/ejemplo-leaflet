@@ -1,3 +1,11 @@
+// Funciones
+
+function updateOpacity() {
+	document.getElementById("span-opacity").innerHTML = document.getElementById("sld-opacity").value;
+	layer_image_temperatura.setOpacity(document.getElementById("sld-opacity").value);
+}
+
+
 // ** Configuración inicial del mapa **
 
 // Creación de un mapa de Leaflet
